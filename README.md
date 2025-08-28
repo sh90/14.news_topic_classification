@@ -73,18 +73,6 @@ python src/llm_classify.py --mode few    # few-shot
 python src/compare.py
 ```
 
----
-
-## Teaching cues (for a 2‑hour session)
-
-- **Evolution story**: Show how accuracy/behavior changes from TF‑IDF → Embeddings → LLM.  
-- **Interpretability**: Print “Top features per class” from the TF‑IDF model.  
-- **Confusions**: Inspect confusion matrices (e.g., **Business vs Tech** headlines).  
-- **Ops tips**: Batch embeddings, cache vectors, add backoff/retries, measure cost and latency.  
-- **Guardrails**: Force LLM to return strict JSON with `response_format={"type":"json_object"}` and validate label membership.
-
----
-
 ## Notes
 
 - Python 3.12, minimal deps.  
