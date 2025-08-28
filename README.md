@@ -1,4 +1,4 @@
-# News Article Topic Classifier — 2‑Hour Demo (Python 3.12, gpt-4o-mini)
+# News Article Topic Classifier — 
 
 **What you'll build:** an end‑to‑end topic classifier for short news snippets with three approaches:
 1) **TF‑IDF + Logistic Regression** (fast, interpretable baseline)  
