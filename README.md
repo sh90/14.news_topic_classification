@@ -9,22 +9,11 @@
 
 ---
 
-## Why this matters in the real world
-
-- **Cold start**: With limited labeled data, LLM zero/few‑shot classification gives you usable accuracy *today*.  
-- **Scale & cost**: As traffic grows, switch to **Embeddings + LR** or **TF‑IDF + LR** for low latency and predictable cost.  
-- **Auditability**: TF‑IDF features provide **interpretability** for compliance and stakeholder trust.  
-- **Multilingual robustness**: Embeddings capture semantics across paraphrases and languages better than n‑gram TF‑IDF.  
-- **Human‑in‑the‑loop**: Use confidence thresholds; route uncertain cases to humans or an LLM for disambiguation.  
-- **Typical use cases**: newsroom content routing, inbox/tag triage, CRM ticket bucketing, social listening, brand safety filters.
-
----
-
 ## Project layout
 
 ```
 news_topic_classifier/
-├─ .env.example
+├─ .env
 ├─ requirements.txt
 ├─ data/
 │  └─ sample_news.csv
@@ -41,10 +30,9 @@ news_topic_classifier/
 
 ## Quickstart
 
-```bash
-python3.12 -m venv .venv && source .venv/bin/activate
+```
+python3.12 for virtual env
 pip install -r requirements.txt
-cp .env.example .env   # paste your real key in .env
 ```
 
 ### 1) Prepare data
@@ -77,4 +65,4 @@ python src/compare.py
 
 - Python 3.12, minimal deps.  
 - Uses `.env` for `OPENAI_API_KEY`.  
-- Small included dataset to keep the demo quick. You can swap in AG News or your proprietary corpus later.
+- Small included dataset to keep the demo quick. You can swap in AG News or your proprietary corpus.
