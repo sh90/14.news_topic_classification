@@ -15,7 +15,7 @@ with st.sidebar:
     action = st.radio("Action", ["Single Prediction", "Evaluate Test Set"])
     st.markdown("---")
     st.markdown("**Artifacts** expected after running CLI scripts:")
-    st.code("python src/prepare_data.py\npython src/train_tfidf.py\npython src/train_embed.py\npython src/llm_classify.py --mode zero\npython src/llm_classify.py --mode few")
+    st.code("python prepare_data.py\npython train_tfidf.py\npython train_embed.py\npython llm_classify.py --mode zero\npython src/llm_classify.py --mode few")
 
 # Helpers
 def tfidf_predict(texts):
