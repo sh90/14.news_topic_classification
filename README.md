@@ -1,6 +1,6 @@
 # News Article Topic Classifier — 
 
-**What you'll build:** an end‑to‑end topic classifier for short news snippets with three approaches:
+**What you'll build:** an end‑to‑end topic classifier for news articles with three approaches:
 1) **TF‑IDF + Logistic Regression** (fast, interpretable baseline)  
 2) **OpenAI Embeddings + Logistic Regression** (semantic generalization)  
 3) **LLM (gpt‑4o‑mini) zero/few‑shot** (no training; prompt‑based JSON output)
