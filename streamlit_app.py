@@ -7,7 +7,7 @@ load_dotenv()
 st.set_page_config(page_title="News Topic Classifier", page_icon="📰")
 
 st.title("📰 News Topic Classifier — Evolution Demo")
-st.caption("TF‑IDF → Embeddings → LLM (gpt‑4o‑mini) | Python 3.12")
+st.caption("TF‑IDF → Embeddings → LLM (gpt‑4o‑mini)")
 
 with st.sidebar:
     st.header("Settings")
