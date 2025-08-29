@@ -1,3 +1,6 @@
+"""
+compare the performance of three algorithm
+"""
 import pandas as pd, joblib, numpy as np
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from utils import LABELS

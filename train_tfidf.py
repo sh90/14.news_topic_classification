@@ -4,6 +4,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from utils import LABELS
 from sklearn.utils.multiclass import unique_labels
+
+
+def eval_split(name, y_true, y_pred):
+    present = list(unique_labels(y_true, y_pred))
+    print(f"\n[{name}] accuracy:", accuracy_score(y_true, y_pred))
+    print(classification_report(y_true, y_pred, labels=present, zero_division=0))
+    print("Confusion:\n", confusion_matrix(y_true, y_pred, labels=present))
+
 def main():
     train = pd.read_csv("data/processed/train.csv")
     val   = pd.read_csv("data/processed/val.csv")
@@ -18,12 +26,6 @@ def main():
 
     clf = LogisticRegression(max_iter=2000)
     clf.fit(Xtr, train.label)
-
-    def eval_split(name, y_true, y_pred):
-        present = list(unique_labels(y_true, y_pred))
-        print(f"\n[{name}] accuracy:", accuracy_score(y_true, y_pred))
-        print(classification_report(y_true, y_pred, labels=present, zero_division=0))
-        print("Confusion:\n", confusion_matrix(y_true, y_pred, labels=present))
 
     for split_name, X, y in [("VAL", Xv, val.label), ("TEST", Xte, test.label)]:
         pred = clf.predict(X)

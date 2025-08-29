@@ -2,7 +2,7 @@ import os, pandas as pd
 from datasets import load_dataset
 from sklearn.model_selection import train_test_split
 from utils import clean_text
-
+# https://autonlp.ai/datasets/ag-news
 # Map AG News (World, Sports, Business, Sci/Tech) -> our labels
 MAP = {
     0: "Politics",   # World -> Politics (approximation for demo)
